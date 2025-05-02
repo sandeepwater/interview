@@ -120,3 +120,26 @@ class Main {
         
     }
 }
+
+
+===== find leader O(n)===
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        int[] a = new int[]{16, 17, 3,5,7, 5, 1,-5, 1};
+        for(int i=0; i< a.length; i++){
+            boolean isLeader = false;
+            int j;
+            for(j = i+1; j < a.length ; j++){
+                if(a[i] <= a[j]){
+                    isLeader = true;
+                     break;
+                }
+            }
+             if(!isLeader && j==a.length){
+                 System.out.println(a[i]);
+             }
+        }
+        
+    }
+}
