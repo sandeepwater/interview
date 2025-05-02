@@ -1,5 +1,5 @@
 
-1. fild num , exists odd number of times, java 8
+======= fild num , exists odd number of times, java 8  ======
 
 
 import java.util.*;
@@ -14,4 +14,31 @@ public static void main(String[] args) {
         .filter(entry -> entry.getValue() % 2 !=0 )
         .map(Map.Entry::getKey).toList();
         System.out.println(oddList);
+}
+
+===== find majority elements  ===== O(n2)
+import java.util.*;
+import java.util.stream.*;
+class Main {
+    public static void main(String[] args) {
+        int[] a = { 1, 2, 3, 2, 3, 1, 3, 3 , 5, 8, 6,54};
+        int maxCount = Integer.MIN_VALUE;
+        int maxCntIndex = -1;
+        for(int i = 0 ; i< a.length -1 ; i++){
+            int tempCount = Integer.MIN_VALUE;
+            for(int j = i+1; j < a.length; j++){
+                if(a[i] == a[j]){
+                    tempCount += 1;
+                }
+                if(maxCount < tempCount){
+                    maxCount = tempCount;
+                    maxCntIndex = i;   
+                }
+            }
+        }
+        
+        if(maxCount <= a.length/2){
+            System.out.println(a[maxCntIndex]);
+        }
+    }
 }
