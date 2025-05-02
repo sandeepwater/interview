@@ -42,3 +42,57 @@ class Main {
         }
     }
 }
+
+===== find majority elements  ===== O(n)
+import java.util.*;
+import java.util.stream.*;
+class Main {
+    public static void main(String[] args) {
+		int intArr[] = { 2, 2, 3, 3, 3, 3 ,5 , 3 };
+	   printMejority(intArr, intArr.length);
+	}
+
+	static void printMejority(int[] a, int n) {
+		
+		int cand = findCandidate(a, n);
+		
+		if(isMejorityElement(a,n,cand)) {
+			System.out.println("Mejority Element: "+cand);
+		}else {
+			System.out.println("None Mejority Element.");
+		}
+	}
+	
+	static int findCandidate(int[] a, int n) {
+		int count=1;
+		int maj_index = 0;
+		
+		for(int i=1;i<a.length;i++) {
+			if(a[maj_index] == a[i])
+				count++;
+			else {
+				count--;
+			}
+			if(count==0) {
+				count=1;
+				maj_index=i;
+			}
+		}
+		return a[maj_index];
+	}
+
+	static boolean isMejorityElement(int[] a, int n, int cand) {
+
+		int count = 0;
+
+		for (int i = 0; i < n; i++) {
+			if (cand == a[i]) {
+				count++;
+			}
+		}
+
+		if (count > n / 2)
+			return true;
+		else return false;
+	}
+}
