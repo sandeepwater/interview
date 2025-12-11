@@ -1,1 +1,41 @@
 https://www.geeksforgeeks.org/interview-experiences/oracle-interview-preparation/
+
+https://www.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1
+class Solution {
+    int maxSubarraySum(int[] arr) {
+        // Code here
+        int n = arr.length;
+            if(arr == null || n == 0) return 0;
+            int maxSum = arr[0];
+            int maxSoFor = arr[0];
+            // Code here
+            for(int i = 1; i < n ; i++) {
+                maxSum = Math.max(arr[i], maxSum + arr[i]);
+                maxSoFor = Math.max(maxSoFor, maxSum);
+            }
+            return maxSoFor;
+    }
+}
+
+https://www.geeksforgeeks.org/problems/parenthesis-checker2744/1
+class Solution {
+    public boolean isBalanced(String s) {
+        Map<Character, Character> map = new HashMap<>();
+        map.put(']', '[');
+        map.put('}', '{');
+        map.put(')', '(');
+        Stack<Character> stack = new Stack<>();
+        for(char c : s.toCharArray()){
+            if(map.containsValue(c)){
+                stack.push(c);
+            } else if(map.containsKey(c)){
+                if(stack.isEmpty() || map.get(c) != stack.pop()){
+                    return false;
+                }
+            }
+        }
+        return stack.isEmpty();
+    }
+}
+
+
