@@ -1,3 +1,5 @@
+WAP to find given two string is isomophic or not.
+
 import java.util.HashMap;
 
 public class IsomorphicStrings {
