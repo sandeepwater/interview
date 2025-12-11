@@ -1,0 +1,5 @@
+https://www.geeksforgeeks.org/java/integer-max_value-and-integer-min_value-in-java-with-examples/
+
+https://www.google.com/search?q=filter+distinct+fron+an+array+using+stream+api&sca_esv=adba07b31be7c891&rlz=1C1CHBF_enIN1067IN1067&sxsrf=AE3TifN69Q09yam05oYrnn9gw-ra0gnQYA%3A1757847968906&ei=oKHGaIWMN_TEvr0Pqs6rmA4&ved=0ahUKEwiF3IX-jdiPAxV0oq8BHSrnCuMQ4dUDCBA&uact=5&oq=filter+distinct+fron+an+array+using+stream+api&gs_lp=Egxnd3Mtd2l6LXNlcnAiLmZpbHRlciBkaXN0aW5jdCBmcm9uIGFuIGFycmF5IHVzaW5nIHN0cmVhbSBhcGkyBxAhGKABGApI6zBQNlj6LnABeAGQAQCYAfIBoAGxGqoBBTAuOS44uAEDyAEA-AEBmAISoAKKG8ICChAAGLADGNYEGEfCAgYQABgWGB7CAgsQABiABBiGAxiKBcICCBAAGKIEGIkFwgIIEAAYgAQYogTCAgYQIRgVGAqYAwDiAwUSATEgQIgGAZAGCJIHBTEuOS44oAfyhQGyBwUwLjkuOLgH_RrCBwgwLjYuMTEuMcgHPQ&sclient=gws-wiz-serp
+
+https://www.geeksforgeeks.org/dsa/longest-palindromic-substring/
