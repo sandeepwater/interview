@@ -1,0 +1,21 @@
+https://www.geeksforgeeks.org/problems/reverse-words-in-a-given-string5459/1
+
+import java.util.*;
+import java.util.stream.*;
+class Solution {
+    public String reverseWords(String s) {
+        if(s == null) return null;
+        String[] a = Arrays.stream(s.split("\\.")).
+           filter(f -> !f.equals("")).toArray(String[]::new);
+        int first = 0; 
+        int last = a.length -1 ;
+        while(first < last){
+            String temp = a[first];
+            a[first] = a[last];
+            a[last] = temp;
+            first++;
+            last--;
+        }
+        return Arrays.stream(a).collect(Collectors.joining("."));
+    }
+}
